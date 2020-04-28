@@ -3,4 +3,3 @@ dart:
   - stable
 dart_task:
   - test: --platform vm
-  - dartfmt: true
