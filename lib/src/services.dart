@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'dart:async';
 import 'dart:mirrors';
+import 'package:path/path.dart';
 import 'package:cloudstate/cloudstate.dart';
 import 'package:logger/logger.dart';
 import 'package:protobuf/protobuf.dart';
@@ -47,7 +48,10 @@ class EntityDiscoveryService extends EntityDiscoveryServiceBase {
     _logger.i('Received discover request from Proxy:\n $request');
     var entitySpecResponseFuture = Completer<EntitySpec>();
 
-    var f = File('../../pubspec.yaml');
+    var path = dirname(Platform.script.toFilePath());
+    var pathToYaml =  join(path, '../pubspec.yaml');
+    _logger.i('Load config file from: $pathToYaml');
+    var f = File(pathToYaml);
     var text = f.readAsStringSync();
     Map yaml = loadYaml(text);
     var serviceInfo = ServiceInfo()

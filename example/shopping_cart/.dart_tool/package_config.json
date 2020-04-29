@@ -15,7 +15,7 @@
     },
     {
       "name": "cloudstate",
-      "rootUri": "file:///root/.pub-cache/hosted/pub.dartlang.org/cloudstate-0.5.4",
+      "rootUri": "file:///root/.pub-cache/hosted/pub.dartlang.org/cloudstate-0.5.5",
       "packageUri": "lib/",
       "languageVersion": "2.7"
     },
@@ -99,7 +99,7 @@
     },
     {
       "name": "path",
-      "rootUri": "file:///root/.pub-cache/hosted/pub.dartlang.org/path-1.6.4",
+      "rootUri": "file:///root/.pub-cache/hosted/pub.dartlang.org/path-1.7.0",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
@@ -152,7 +152,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-04-17T20:52:01.477298Z",
+  "generated": "2020-04-29T21:11:33.023194Z",
   "generator": "pub",
   "generatorVersion": "2.7.2"
 }
