@@ -14,7 +14,7 @@ import 'generated/protocol/cloudstate/entity.pb.dart';
 import 'generated/protocol/cloudstate/event_sourced.pb.dart';
 import 'generated/protocol/google/protobuf/any.pb.dart';
 
-class EventSourcedStatefulService implements StatefulService {
+class EventSourcedStatefulService implements CloudstateService {
   static const String event_sourced_type =
       'cloudstate.eventsourced.EventSourced';
 

@@ -19,10 +19,11 @@ class Config {
 
 class CloudstateRunner {
   final Config config;
-  final Map<String, StatefulService> services;
+  final Map<String, CloudstateService> services;
 
-  EntityDiscoveryService _entityDiscoveryService;
+  StatelessService _statelessService;
   EventSourcedService _eventSourcedService;
+  EntityDiscoveryService _entityDiscoveryService;
 
   Logger _logger;
 
@@ -35,8 +36,8 @@ class CloudstateRunner {
       output: SimpleConsoleOutput(),
     );
 
+    _statelessService = StatelessService(config, services);
     _eventSourcedService = EventSourcedService(config, services);
-
     _entityDiscoveryService = EntityDiscoveryService(config, services);
 
     final server = Server([_entityDiscoveryService, _eventSourcedService]);
