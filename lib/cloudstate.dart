@@ -9,11 +9,12 @@ export 'src/generated/protocol/google/protobuf/descriptor.pb.dart';
 
 import 'package:cloudstate/src/base.dart';
 import 'package:cloudstate/src/event_sourced.dart';
+import 'package:cloudstate/src/stateless.dart';
 import 'package:logger/logger.dart';
 import 'package:cloudstate/src/services.dart';
 
 class Cloudstate {
-  final Map<String, StatefulService> services = {};
+  final Map<String, CloudstateService> services = {};
 
   final _logger = Logger(
     filter: CloudstateLogFilter(Level.verbose),
@@ -35,6 +36,17 @@ class Cloudstate {
     _config = Config(port, address, Level.verbose);
     services[serviceName] = EventSourcedStatefulService(serviceName, entity, 1);
   }
+  
+  void registerStatelessEntity(String serviceName, Type entity) {
+    _logger.d('Registering StatelessEntity...');
+
+    if (entity == null) {
+      throw ArgumentError('type: $entity');
+    }
+
+    _config = Config(port, address, Level.verbose);
+    services[serviceName] = StatelessEntityService(serviceName, entity);
+  }
 
   Future<void> start([Config config]) {
     if (config == null) {
@@ -43,3 +55,4 @@ class Cloudstate {
     return CloudstateRunner(config, services).start();
   }
 }
+

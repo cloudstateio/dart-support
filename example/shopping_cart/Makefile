@@ -1,4 +1,4 @@
-image=sleipnir/cloudstate-dart-shoppingcart:0.5.5
+image=sleipnir/cloudstate-dart-shoppingcart:0.5.6
 
 .PHONY: all clean
 

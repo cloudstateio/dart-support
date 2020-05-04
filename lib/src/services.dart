@@ -1,6 +1,8 @@
 import 'dart:io';
 import 'dart:async';
 import 'dart:mirrors';
+import 'package:cloudstate/src/generated/protocol/cloudstate/function.pbgrpc.dart';
+import 'package:cloudstate/src/stateless.dart';
 import 'package:path/path.dart';
 import 'package:cloudstate/cloudstate.dart';
 import 'package:logger/logger.dart';
@@ -17,7 +19,7 @@ import 'package:grpc/src/server/call.dart';
 
 import 'generated/protocol/google/protobuf/any.pb.dart';
 
-class StatefulService {
+class CloudstateService {
   // ignore: missing_return
   String serviceName() {}
   // ignore: missing_return
@@ -31,9 +33,9 @@ class StatefulService {
 class EntityDiscoveryService extends EntityDiscoveryServiceBase {
   Logger _logger;
   Config config;
-  Map<String, StatefulService> services;
+  Map<String, CloudstateService> services;
 
-  EntityDiscoveryService(Config config, Map<String, StatefulService> services){
+  EntityDiscoveryService(Config config, Map<String, CloudstateService> services){
     this.config = config;
     this.services = services;
     _logger = Logger(
@@ -83,7 +85,7 @@ class EntityDiscoveryService extends EntityDiscoveryServiceBase {
     return Future.value(Empty.getDefault());
   }
 
-  Entity createEntity(String k, StatefulService v) {
+  Entity createEntity(String k, CloudstateService v) {
     return Entity()
       ..serviceName = v.serviceName()
       ..entityType = v.entityType()
@@ -91,13 +93,54 @@ class EntityDiscoveryService extends EntityDiscoveryServiceBase {
   }
 }
 
+class StatelessService extends StatelessFunctionServiceBase  {
+  Logger _logger;
+  Config config;
+  Map<String, StatelessEntityService> services;
+
+  StatelessService(Config config, Map<String, CloudstateService> services){
+    this.config = config;
+    this.services = services;
+    _logger = Logger(
+      filter: CloudstateLogFilter(config.logLevel),
+      printer: LogfmtPrinter(),
+      output: SimpleConsoleOutput(),
+    );
+  }
+
+  @override
+  Stream<FunctionReply> handleStreamed(ServiceCall call, Stream<FunctionCommand> request) {
+    // TODO: implement handleStreamed
+    return null;
+  }
+
+  @override
+  Future<FunctionReply> handleStreamedIn(ServiceCall call, Stream<FunctionCommand> request) {
+    // TODO: implement handleStreamedIn
+    return null;
+  }
+
+  @override
+  Stream<FunctionReply> handleStreamedOut(ServiceCall call, FunctionCommand request) {
+    // TODO: implement handleStreamedOut
+    return null;
+  }
+
+  @override
+  Future<FunctionReply> handleUnary(ServiceCall call, FunctionCommand request) {
+    // TODO: implement handleUnary
+    return null;
+  }
+
+}
+
 class EventSourcedService extends EventSourcedServiceBase {
   Logger _logger;
 
   Config config;
-  Map<String, StatefulService> services;
+  Map<String, CloudstateService> services;
 
-  EventSourcedService(Config config, Map<String, StatefulService> services){
+  EventSourcedService(Config config, Map<String, CloudstateService> services){
     this.config = config;
     this.services = services;
     _logger = Logger(
