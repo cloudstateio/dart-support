@@ -100,7 +100,13 @@ class StatelessService extends StatelessFunctionServiceBase  {
 
   StatelessService(Config config, Map<String, CloudstateService> services){
     this.config = config;
-    this.services = services;
+    this.services = {
+      for (var e in services.entries) {
+        if (e.value.entityType() == StatelessEntityService.entity_type) {
+          e.key : e.value
+        }
+      }
+    } as Map<String, StatelessEntityService>;
     _logger = Logger(
       filter: CloudstateLogFilter(config.logLevel),
       printer: LogfmtPrinter(),
@@ -109,28 +115,42 @@ class StatelessService extends StatelessFunctionServiceBase  {
   }
 
   @override
+  Future<FunctionReply> handleUnary(ServiceCall call, FunctionCommand request) {
+    return runUnaryStatelessEntity(request);
+  }
+
+  @override
   Stream<FunctionReply> handleStreamed(ServiceCall call, Stream<FunctionCommand> request) {
-    // TODO: implement handleStreamed
-    return null;
+    return runStreamedStatelessEntity(request);
   }
 
   @override
   Future<FunctionReply> handleStreamedIn(ServiceCall call, Stream<FunctionCommand> request) {
-    // TODO: implement handleStreamedIn
-    return null;
+    return runStreamedInStatelessEntity(request);
   }
 
   @override
   Stream<FunctionReply> handleStreamedOut(ServiceCall call, FunctionCommand request) {
-    // TODO: implement handleStreamedOut
-    return null;
+    return runStreamedOutStatelessEntity(request);
   }
 
-  @override
-  Future<FunctionReply> handleUnary(ServiceCall call, FunctionCommand request) {
-    // TODO: implement handleUnary
-    return null;
+  Future<FunctionReply> runUnaryStatelessEntity(FunctionCommand request) {
+    var service = services[request.serviceName];
+    _logger.d('Service found ${service.serviceName()}\n');
+    var entityHandler = StatelessEntityHandlerFactory.getOrCreate(service);
   }
+
+  Stream<FunctionReply> runStreamedStatelessEntity(Stream<FunctionCommand> request) async* {
+    await for (var stream in request) {
+      _logger.d('Stream message received:\n$stream');
+      yield FunctionReply.getDefault();
+    }
+  }
+
+  Future<FunctionReply> runStreamedInStatelessEntity(Stream<FunctionCommand> request) {}
+
+  Stream<FunctionReply> runStreamedOutStatelessEntity(FunctionCommand request) {}
+
 
 }
 
@@ -138,11 +158,17 @@ class EventSourcedService extends EventSourcedServiceBase {
   Logger _logger;
 
   Config config;
-  Map<String, CloudstateService> services;
+  Map<String, EventSourcedStatefulService> services;
 
   EventSourcedService(Config config, Map<String, CloudstateService> services){
     this.config = config;
-    this.services = services;
+    this.services = {
+      for (var e in services.entries) {
+       if (e.value.entityType() == EventSourcedStatefulService.entity_type) {
+         e.key : e.value
+       }
+      }
+    } as Map<String, EventSourcedStatefulService>;
     _logger = Logger(
     filter: CloudstateLogFilter(config.logLevel),
     printer: LogfmtPrinter(),
@@ -193,8 +219,7 @@ class EventSourcedService extends EventSourcedServiceBase {
           yield EventSourcedStreamOut.create()..failure = failure;
         }
 
-        service =
-            services[initMessage.serviceName] as EventSourcedStatefulService;
+        service = services[initMessage.serviceName];
         _logger.d('Service found ${service.serviceName()}\n');
         entityHandler =
             EventSourcedEntityHandlerFactory.getOrCreate(entityId, service);

@@ -188,13 +188,13 @@ class ShoppingCartEntity {
     _cart.remove(itemRemoved.productId);
   }
 
-  @EventSourcedCommandHandler()
+  @CommandHandler()
   Shoppingcart.Cart getCart() {
     return Shoppingcart.Cart.create()
         ..items.addAll(_cart.values);
   }
 
-  @EventSourcedCommandHandler()
+  @CommandHandler()
   Empty addItem(Shoppingcart.AddLineItem item, CommandContext ctx) {
     if (item.quantity <= 0) {
       ctx.fail('Cannot add negative quantity of to item ${item.productId}');
@@ -209,7 +209,7 @@ class ShoppingCartEntity {
     return Empty.getDefault();
   }
 
-  @EventSourcedCommandHandler()
+  @CommandHandler()
   Empty removeItem(Shoppingcart.RemoveLineItem item, CommandContext ctx) {
     if (!_cart.containsKey(item.productId)) {
       ctx.fail('Cannot remove item ${item.productId} because it is not in the cart.');

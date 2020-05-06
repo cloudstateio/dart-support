@@ -15,7 +15,7 @@ import 'generated/protocol/cloudstate/event_sourced.pb.dart';
 import 'generated/protocol/google/protobuf/any.pb.dart';
 
 class EventSourcedStatefulService implements CloudstateService {
-  static const String event_sourced_type =
+  static const String entity_type =
       'cloudstate.eventsourced.EventSourced';
 
   String service;
@@ -53,7 +53,7 @@ class EventSourcedStatefulService implements CloudstateService {
 
   @override
   String entityType() {
-    return event_sourced_type;
+    return entity_type;
   }
 
   @override
