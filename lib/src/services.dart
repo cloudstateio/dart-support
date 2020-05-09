@@ -36,6 +36,11 @@ class EntityDiscoveryService extends EntityDiscoveryServiceBase {
   Map<String, CloudstateService> services;
 
   EntityDiscoveryService(Config config, Map<String, CloudstateService> services){
+<<<<<<< HEAD
+=======
+    this.config = config;
+    this.services = services;
+>>>>>>> upstream/master
     _logger = Logger(
       filter: CloudstateLogFilter(config.logLevel),
       printer: LogfmtPrinter(),
@@ -150,12 +155,10 @@ class StatelessService extends StatelessFunctionServiceBase  {
 
   Stream<FunctionReply> runStreamedOutStatelessEntity(FunctionCommand request) {}
 
-
 }
 
 class EventSourcedService extends EventSourcedServiceBase {
   Logger _logger;
-
   Config config;
   Map<String, EventSourcedStatefulService> services = Map();
 
