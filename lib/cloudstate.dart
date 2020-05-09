@@ -49,17 +49,6 @@ class Cloudstate {
     services[serviceName] = EventSourcedStatefulService(serviceName, entity, 1);
     return this;
   }
-  
-  void registerStatelessEntity(String serviceName, Type entity) {
-    _logger.d('Registering StatelessEntity...');
-
-    if (entity == null) {
-      throw ArgumentError('type: $entity');
-    }
-
-    _config = Config(port, address, Level.verbose);
-    services[serviceName] = StatelessEntityService(serviceName, entity);
-  }
 
   Future<void> start([Config config]) {
     if (config == null) {

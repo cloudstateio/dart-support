@@ -36,11 +36,6 @@ class EntityDiscoveryService extends EntityDiscoveryServiceBase {
   Map<String, CloudstateService> services;
 
   EntityDiscoveryService(Config config, Map<String, CloudstateService> services){
-<<<<<<< HEAD
-=======
-    this.config = config;
-    this.services = services;
->>>>>>> upstream/master
     _logger = Logger(
       filter: CloudstateLogFilter(config.logLevel),
       printer: LogfmtPrinter(),
