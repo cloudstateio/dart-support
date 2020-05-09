@@ -40,10 +40,22 @@ class CloudstateRunner {
     _eventSourcedService = EventSourcedService(config, services);
     _entityDiscoveryService = EntityDiscoveryService(config, services);
 
-    final server = Server([_entityDiscoveryService, _eventSourcedService]);
+    final server = Server(
+        [
+          _entityDiscoveryService,
+          _eventSourcedService,
+          _statelessService
+        ]
+    );
 
     await server.serve(port: config.port);
     _logger.i('Server listening on ${config.address}:${config.port} ...');
+
+    ProcessSignal.sigint.watch().listen((_) async {
+      _logger.i('Server stopping ...');
+      await server.shutdown();
+      exit(0);
+    });
   }
 }
 

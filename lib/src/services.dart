@@ -36,13 +36,13 @@ class EntityDiscoveryService extends EntityDiscoveryServiceBase {
   Map<String, CloudstateService> services;
 
   EntityDiscoveryService(Config config, Map<String, CloudstateService> services){
-    this.config = config;
-    this.services = services;
     _logger = Logger(
       filter: CloudstateLogFilter(config.logLevel),
       printer: LogfmtPrinter(),
       output: SimpleConsoleOutput(),
     );
+    this.config = config;
+    this.services = services;
   }
 
   @override
@@ -99,19 +99,18 @@ class StatelessService extends StatelessFunctionServiceBase  {
   Map<String, StatelessEntityService> services;
 
   StatelessService(Config config, Map<String, CloudstateService> services){
-    this.config = config;
-    this.services = {
-      for (var e in services.entries) {
-        if (e.value.entityType() == StatelessEntityService.entity_type) {
-          e.key : e.value
-        }
-      }
-    } as Map<String, StatelessEntityService>;
     _logger = Logger(
       filter: CloudstateLogFilter(config.logLevel),
       printer: LogfmtPrinter(),
       output: SimpleConsoleOutput(),
     );
+    this.config = config;
+    for (var e in services.entries) {
+      if (e.value.entityType() == StatelessEntityService.entity_type) {
+        _logger.v("Found ${StatelessEntityService.entity_type}");
+        this.services[e.key] = e.value;
+      }
+    }
   }
 
   @override
@@ -158,23 +157,21 @@ class EventSourcedService extends EventSourcedServiceBase {
   Logger _logger;
 
   Config config;
-  Map<String, EventSourcedStatefulService> services;
+  Map<String, EventSourcedStatefulService> services = Map();
 
   EventSourcedService(Config config, Map<String, CloudstateService> services){
-    this.config = config;
-    this.services = {
-      for (var e in services.entries) {
-       if (e.value.entityType() == EventSourcedStatefulService.entity_type) {
-         e.key : e.value
-       }
-      }
-    } as Map<String, EventSourcedStatefulService>;
     _logger = Logger(
-    filter: CloudstateLogFilter(config.logLevel),
-    printer: LogfmtPrinter(),
-    output: SimpleConsoleOutput(),
+      filter: CloudstateLogFilter(config.logLevel),
+      printer: LogfmtPrinter(),
+      output: SimpleConsoleOutput(),
     );
-
+    this.config = config;
+    for (var e in services.entries) {
+      if (e.value.entityType() == EventSourcedStatefulService.entity_type) {
+        _logger.v("Found ${EventSourcedStatefulService.entity_type}");
+        this.services[e.key] = e.value;
+      }
+    }
   }
 
   /// The stream. One stream will be established per active entity.
