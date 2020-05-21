@@ -1,3 +1,7 @@
+## 0.5.6
+
+- Add TCK tests
+
 ## 0.5.5
 
 - Fix. DiscoveryService version
