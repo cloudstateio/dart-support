@@ -6,7 +6,7 @@ homepage: https://cloudstate.io
 repository: https://github.com/sleipnir/cloudstate-dart-support.git
 
 environment:
-  sdk: '>=2.7.0 <3.0.0'
+  sdk: '>=2.8.0 <3.0.0'
 
 dependencies:
   cloudstate: ^0.5.6
