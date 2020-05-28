@@ -15,7 +15,7 @@ description: A Cloudstate Dart ShoppingCart Example.
 author: Adriano Santos <sleipnir@bsd.com.br>
 
 environment:
-  sdk: '>=2.7.0 <3.0.0'
+  sdk: '>=2.8.0 <3.0.0'
 
 dependencies:
   cloudstate: ^0.5.1
