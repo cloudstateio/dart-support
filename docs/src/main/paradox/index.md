@@ -8,6 +8,7 @@ Cloudstate offers an idiomatic, annotation based Dart support library for writin
 
 * [Getting started](gettingstarted.md)
 * [Event sourcing](eventsourced.md)
+* [Stateless Functions](stateless.md)
 * [Conflict-free Replicated Data Types](crdt.md)
 * [Examples](examples.md)
 * [Serialization](serialization.md)
