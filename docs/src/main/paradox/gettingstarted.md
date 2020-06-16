@@ -1,4 +1,4 @@
-# Getting started with stateful services in Dart
+# Getting started
 
 ## Prerequisites
 
