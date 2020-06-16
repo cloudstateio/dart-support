@@ -1,10 +1,10 @@
 # Event sourcing
 
-This page documents how to implement Cloudstate event sourced entities in Dart. For information on what Cloudstate event sourced entities are, please read the general @extref[Event sourcing](cloudstate:user/features/eventsourced.html) documentation first.
+This page documents how to implement Cloudstate event sourced entities in Dart. For information on what Cloudstate event sourced entities are, please read the general @extref:[Event sourcing](cloudstate:user/features/eventsourced.html) documentation first.
 
 An event sourced entity can be created by annotating it with the `@EventSourcedEntity()` annotation.
 
-@@snip [ShoppingCartEntity.kt](/docs/src/test/dart/docs/user/eventsourced/eventsourced_entity.dart) { #entity-class }
+@@snip [ShoppingCartEntity.kt]($base$/docs/src/test/eventsourced/eventsourced_entity.dart) { #entity-class }
 
 The `@EventSourcedEntity` annotation has two parameters that can be used:
 
@@ -19,19 +19,19 @@ While protobufs are the recommended format for persisting events, it is recommen
 
 For our shopping cart example, we'll create a new file called `domain.proto`, the name domain is selected to indicate that these are my applications domain objects:
 
-@@snip [domain.proto](/docs/src/test/proto/domain.proto)
+@@snip [domain.proto]($base$/docs/src/test/proto/domain.proto)
 
 ## State
 
 Each entity should store its state locally in a mutable variable, either a mutable field or a multiple structure such as a collection. For our shopping cart, the state is a map of product ids to products, so we'll create a map to contain that:
 
-@@snip [eventsourced_entity.dart](/docs/src/test/dart/docs/user/eventsourced/eventsourced_entity.dart) { #entity-state }
+@@snip [eventsourced_entity.dart]($base$/docs/src/test/eventsourced/eventsourced_entity.dart) { #entity-state }
 
 ## Constructing
 
 The context available for injection into the constructor is a `EventSourcedEntityCreationContext`. While you don't necessarily need to define a constructor, you can define one and have that context injected in. The constructor below shows having the entity id injected:
 
-@@snip [eventsourced_entity.dart](/docs/src/test/dart/docs/user/eventsourced/eventsourced_entity.dart) { #constructing }
+@@snip [eventsourced_entity.dart]($base$/docs/src/test/eventsourced/eventsourced_entity.dart) { #constructing }
 
 @@@ note { title=Important }
 Constructors can be simple or they can be named constructors. The most important thing is that there can only be one for each class of entity
@@ -49,7 +49,7 @@ The return type of the command handler must be the output type for the gRPC serv
 
 The following shows the implementation of the `GetCart` command handler. This command handler is a read-only command handler, it doesn't emit any events, it just returns some state:
 
-@@snip [eventsourced_entity.dart](/docs/src/test/dart/docs/user/eventsourced/eventsourced_entity.dart) { #get-cart }
+@@snip [eventsourced_entity.dart]($base$/docs/src/test/eventsourced/eventsourced_entity.dart) { #get-cart }
 
 ### Emitting events
 
@@ -63,7 +63,7 @@ A command handler may emit an event by taking in a `CommandContext` parameter, a
 
 Here's an example of a command handler that emits an event:
 
-@@snip [eventsourced_entity.dart](/docs/src/test/dart/docs/user/eventsourced/eventsourced_entity.dart) { #add-item }
+@@snip [eventsourced_entity.dart]($base$/docs/src/test/eventsourced/eventsourced_entity.dart) { #add-item }
 
 This command handler also validates the command, ensuring the quantity items added is greater than zero. Invoking `ctx.fail` fails the command - this method throws so there's no need to explicitly throw an exception.
 
@@ -77,26 +77,26 @@ Event handlers are differentiated by the type of event they handle. By default, 
 
 Here's an example event handler for the `ItemAdded` event. A utility method, `convert` is also defined to assist it.
 
-@@snip [eventsourced_entity.dart](/docs/src/test/dart/docs/user/eventsourced/eventsourced_entity.dart) { #item-added }
+@@snip [eventsourced_entity.dart]($base$/docs/src/test/eventsourced/eventsourced_entity.dart) { #item-added }
 
 ## Producing and handling snapshots
 
 Snapshots are an important optimisation for event sourced entities that may contain many events, to ensure that they can be loaded quickly even when they have very long journals. To produce a snapshot, a method annotated with `@Snapshot()` must be declared. It takes a context class of type `SnapshotContext`, and must return a snapshot of the current state in serializable form. 
 
-@@snip [eventsourced_entity.dart](/docs/src/test/dart/docs/user/eventsourced/eventsourced_entity.dart) { #snapshot }
+@@snip [eventsourced_entity.dart]($base$/docs/src/test/eventsourced/eventsourced_entity.dart) { #snapshot }
 
 When the entity is loaded again, the snapshot will first be loaded before any other events are received, and passed to a snapshot handler. Snapshot handlers are declare by annotating a method with `@SnapshotHandler()`, and it can take a context class of type `SnapshotContext`.
 
 Multiple snapshot handlers may be defined to handle multiple different types of snapshots, the type matching is done in the same way as for events.
 
-@@snip [eventsourced_entity.dart](/docs/src/test/dart/docs/user/eventsourced/eventsourced_entity.dart) { #handle-snapshot }
+@@snip [eventsourced_entity.dart]($base$/docs/src/test/eventsourced/eventsourced_entity.dart) { #handle-snapshot }
 
 ## Registering the entity
 
 Once you've created your entity, you can register it with the `CloudState` server, by invoking the `registerEventSourcedEntity` method. In addition to passing the protobuf qualified package name, and your entity class.
 
-@@snip [eventsourced_entity.dart](/docs/src/test/dart/docs/user/eventsourced/behavior/eventsourced_entity.dart) { #content }
+@@snip [eventsourced_entity.dart]($base$/docs/src/test/eventsourced/behavior/eventsourced_entity.dart) { #content }
 
 The complete code for our entity class would look like this:
 
-@@snip [eventsourced_entity.dart](/docs/src/test/dart/docs/user/eventsourced/eventsourced_entity.dart) { #register }
+@@snip [eventsourced_entity.dart]($base$/docs/src/test/eventsourced/eventsourced_entity.dart) { #register }

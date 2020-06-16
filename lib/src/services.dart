@@ -107,7 +107,7 @@ class StatelessService extends StatelessFunctionServiceBase  {
     this.config = config;
     for (var e in services.entries) {
       if (e.value.entityType() == StatelessEntityService.entity_type) {
-        _logger.v("Found ${StatelessEntityService.entity_type}");
+        _logger.v('Found ${StatelessEntityService.entity_type}');
         this.services[e.key] = e.value;
       }
     }
@@ -166,7 +166,7 @@ class EventSourcedService extends EventSourcedServiceBase {
     this.config = config;
     for (var e in services.entries) {
       if (e.value.entityType() == EventSourcedStatefulService.entity_type) {
-        _logger.v("Found ${EventSourcedStatefulService.entity_type}");
+        _logger.v('Found ${EventSourcedStatefulService.entity_type}');
         this.services[e.key] = e.value;
       }
     }

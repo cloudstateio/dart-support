@@ -3,7 +3,7 @@
 ## Prerequisites
 
 ### Dart version
-Cloudstate Dart support requires Dart sdk >=2.7.0 <3.0.0.
+Cloudstate Dart support requires Dart sdk $cloudstate.dart.version$.
 
 ### Build tool
 Use Dart [Pub](https://dart.dev/tools/pub/cmd) tool for build Cloudstate Dart projects.
@@ -55,7 +55,7 @@ dependencies:
 
 You will need to create a folder to store the .proto definition files for your project. Create a folder called `protos` at the root of your project.
 
-So, if you were to build the example shopping cart application shown earlier in @ref:[gRPC descriptors](../../features/grpc.md) and assuming you created a project called shopping_cart, you could simply paste that protobuf into `shopping_cart/protos/shoppingcart.proto`.
+So, if you were to build the example shopping cart application shown earlier in @extref:[gRPC descriptors](cloudstate:user/features/grpc.html) and assuming you created a project called shopping_cart, you could simply paste that protobuf into `shopping_cart/protos/shoppingcart.proto`.
 
 Now run `protoc` in the root folder of your project to generate Dart files:
 
@@ -74,6 +74,6 @@ Using the `descriptor_set_out = user-function.desc` option exactly as presented 
 
 Your main class will be responsible for creating the Cloudstate gRPC server, registering the entities for your placement and starting it. To do this, you can use the `Cloudstate` class server builder, for example, in the `bin/` folder create a file called `main.dart` with the following content:
 
-@@snip [main.dart](/docs/src/test/dart/docs/user/gettingstarted/main.dart) { #shopping-cart-main }
+@@snip [main.dart]($base$/docs/src/test/gettingstarted/main.dart) { #shopping-cart-main }
 
 We will see more details on registering entities in the coming pages.
