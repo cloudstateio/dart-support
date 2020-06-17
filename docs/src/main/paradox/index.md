@@ -1,4 +1,4 @@
-# Dart
+# Cloudstate Dart
 
 Cloudstate offers an idiomatic, annotation based Dart support library for writing stateful services.
 
