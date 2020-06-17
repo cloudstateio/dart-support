@@ -8,7 +8,7 @@ jobs:
     # Build
     - stage: build
       script:
-        - pub get
+        - pub publish --dry-run
     
     # Deploy docs
     - stage: deploy_docs
