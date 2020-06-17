@@ -395,6 +395,8 @@ project/plugins/project/
 .history
 .cache
 .lib/
+doc/target/*
+doc/project/project/*
 
 ### Windows ###
 # Windows thumbnail cache files
