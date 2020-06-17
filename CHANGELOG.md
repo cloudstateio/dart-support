@@ -1,3 +1,7 @@
+## 0.5.7
+
+- New Cloudstate documentation
+
 ## 0.5.6
 
 - Add TCK tests

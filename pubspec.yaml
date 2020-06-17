@@ -1,5 +1,5 @@
 name: cloudstate
-version: 0.5.6
+version: 0.5.7
 description: A Cloudstate Dart Language Support.
 homepage: https://cloudstate.io
 repository: https://github.com/sleipnir/cloudstate-dart-support.git
