@@ -1,5 +1,32 @@
 language: dart
+
 dart:
   - stable
-dart_task:
-  - test: --platform vm
+
+jobs:
+  include:
+    # Build
+    - stage: build
+      script:
+        - pub run build test
+    
+    # Deploy docs
+    - stage: deploy_docs
+      name: deploy docs to cloudstate.io
+      if: repo = cloudstateio/dart-support AND ((branch = master AND type = push) OR tag =~ ^v)
+      language: scala
+      script: cd docs && sbt deploy
+
+stages:
+  - build
+  - deploy_docs
+
+cache:
+  directories:
+    - $HOME/.pub-cache
+    - .dart_tool/build
+
+env:
+  global:
+    # Docs deploy token encrypted with: travis encrypt --pro -r cloudstateio/dart-support DEPLOY_DOCS_TOKEN={token}
+    secure: "PRMJYFNQBMV8YxvnnKfmF6WbnerRnQzSUNCBVkZYDn69272Iu1Xgmk8ql1z7rek+5kYLy+fEJR+1Go/o6mp0F21w1xq4myjnqiEfd+z9W76RHIFFl/eV9Ud0DZfpxezeukk8FYvkciwVHIykzS/lZr/tdr0tpdb0UAP6LmTZVm/BDYsuuHayZzXcpqNiKyd+lm9e0lhKhC/26clvU7KF4sEh3ApMxd0NwefJL/JvQKxPGOOO83yssxn59iF5oGBp97jGXctPrV9/ShdJETZl4xBVqD+moc8b6AFnAai+EP1p+utJEChz8xRJzgbiKkG/9arcBx89lXZtx3iaKLZ4vnomKUX9MwaGg8jfDYvBaZX73n2xXJC4EvsEYFsdTd0etudru5s/IGQe2126JykDqGXVL8D8Fv8tFhOgXQ9oDSBfHz73fp6dZiAkG+VxmxLoKsha2uyRzDNSvuiQzY52eeAMAkEX6aLUhUzaNQE+7PHWGPxHg4tYMtbkmglvpJ3vvnKSBt0+Jo/zTnF9mrxfsQtj1uJK6qTPcPrfsRgnCZVLi0MyIILpyFOL28+DreplVJ5EU0SQhtToTl8IQQMFK++aHO/Nod3jpxyaGFYXxS7cMMUsN5REAijhMWnHfN92UsT04UBc+tGGkicTlfor5vEfhe6OnbsXvEqMeOFENBQ="
