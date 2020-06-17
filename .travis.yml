@@ -15,7 +15,11 @@ jobs:
       name: deploy docs to cloudstate.io
       if: repo = cloudstateio/dart-support AND ((branch = master AND type = push) OR tag =~ ^v)
       language: scala
+<<<<<<< HEAD
       script: cd doc && sbt deploy
+=======
+      script: cd docs && sbt deploy
+>>>>>>> wip-docs-paradox-plugin
 
 stages:
   - build
