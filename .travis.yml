@@ -15,7 +15,7 @@ jobs:
       name: deploy docs to cloudstate.io
       if: repo = cloudstateio/dart-support AND ((branch = master AND type = push) OR tag =~ ^v)
       language: scala
-      script: cd docs && sbt deploy
+      script: cd doc && sbt deploy
 
 stages:
   - build
