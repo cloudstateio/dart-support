@@ -1,0 +1,554 @@
+[0m[[0m[0mdebug[0m] [0m[0mjava.io.FileNotFoundException: /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/../docs/src/test/gettingstarted/main.dart (Arquivo ou diretório não encontrado)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open0(Native Method)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:79)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Snippet$.apply(Snippet.scala:29)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.SnipDirective.render(Directive.scala:484)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.DirectiveSerializer.visit(Directive.scala:41)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:386)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.DirectiveNode.accept(DirectiveNode.java:59)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.toHtml(ToHtmlSerializer.java:70)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.write(Writer.scala:78)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeFragment(Writer.scala:87)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeContent(Writer.scala:48)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.liftedTree1$1(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.<init>(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.render$1(ParadoxProcessor.scala:77)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.$anonfun$process$8(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.collection.immutable.List.flatMap(List.scala:338)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.process(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.sbt.ParadoxPlugin$.$anonfun$baseParadoxSettings$51(ParadoxPlugin.scala:192)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.std.Transform$$anon$4.work(Transform.scala:67)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$2(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:19)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.work(Execute.scala:290)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$1(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:178)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.CompletionService$$anon$2.call(CompletionService.scala:37)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:834)[0m
+[0m[[0m[0mdebug[0m] [0m[0mjava.io.FileNotFoundException: /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/../docs/src/test/eventsourced/eventsourced_entity.dart (Arquivo ou diretório não encontrado)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open0(Native Method)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:79)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Snippet$.apply(Snippet.scala:29)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.SnipDirective.render(Directive.scala:484)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.DirectiveSerializer.visit(Directive.scala:41)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:386)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.DirectiveNode.accept(DirectiveNode.java:59)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.toHtml(ToHtmlSerializer.java:70)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.write(Writer.scala:78)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeFragment(Writer.scala:87)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeContent(Writer.scala:48)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.liftedTree1$1(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.<init>(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.render$1(ParadoxProcessor.scala:77)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.$anonfun$process$8(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.collection.immutable.List.flatMap(List.scala:338)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.process(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.sbt.ParadoxPlugin$.$anonfun$baseParadoxSettings$51(ParadoxPlugin.scala:192)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.std.Transform$$anon$4.work(Transform.scala:67)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$2(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:19)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.work(Execute.scala:290)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$1(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:178)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.CompletionService$$anon$2.call(CompletionService.scala:37)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:834)[0m
+[0m[[0m[0mdebug[0m] [0m[0mjava.io.FileNotFoundException: /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/../docs/src/test/proto/domain.proto (Arquivo ou diretório não encontrado)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open0(Native Method)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:79)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Snippet$.apply(Snippet.scala:29)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.SnipDirective.render(Directive.scala:484)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.DirectiveSerializer.visit(Directive.scala:41)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:386)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.DirectiveNode.accept(DirectiveNode.java:59)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.toHtml(ToHtmlSerializer.java:70)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.write(Writer.scala:78)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeFragment(Writer.scala:87)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeContent(Writer.scala:48)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.liftedTree1$1(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.<init>(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.render$1(ParadoxProcessor.scala:77)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.$anonfun$process$8(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.collection.immutable.List.flatMap(List.scala:338)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.process(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.sbt.ParadoxPlugin$.$anonfun$baseParadoxSettings$51(ParadoxPlugin.scala:192)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.std.Transform$$anon$4.work(Transform.scala:67)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$2(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:19)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.work(Execute.scala:290)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$1(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:178)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.CompletionService$$anon$2.call(CompletionService.scala:37)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:834)[0m
+[0m[[0m[0mdebug[0m] [0m[0mjava.io.FileNotFoundException: /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/../docs/src/test/eventsourced/eventsourced_entity.dart (Arquivo ou diretório não encontrado)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open0(Native Method)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:79)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Snippet$.apply(Snippet.scala:29)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.SnipDirective.render(Directive.scala:484)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.DirectiveSerializer.visit(Directive.scala:41)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:386)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.DirectiveNode.accept(DirectiveNode.java:59)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.toHtml(ToHtmlSerializer.java:70)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.write(Writer.scala:78)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeFragment(Writer.scala:87)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeContent(Writer.scala:48)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.liftedTree1$1(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.<init>(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.render$1(ParadoxProcessor.scala:77)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.$anonfun$process$8(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.collection.immutable.List.flatMap(List.scala:338)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.process(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.sbt.ParadoxPlugin$.$anonfun$baseParadoxSettings$51(ParadoxPlugin.scala:192)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.std.Transform$$anon$4.work(Transform.scala:67)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$2(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:19)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.work(Execute.scala:290)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$1(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:178)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.CompletionService$$anon$2.call(CompletionService.scala:37)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:834)[0m
+[0m[[0m[0mdebug[0m] [0m[0mjava.io.FileNotFoundException: /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/../docs/src/test/eventsourced/eventsourced_entity.dart (Arquivo ou diretório não encontrado)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open0(Native Method)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:79)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Snippet$.apply(Snippet.scala:29)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.SnipDirective.render(Directive.scala:484)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.DirectiveSerializer.visit(Directive.scala:41)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:386)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.DirectiveNode.accept(DirectiveNode.java:59)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.toHtml(ToHtmlSerializer.java:70)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.write(Writer.scala:78)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeFragment(Writer.scala:87)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeContent(Writer.scala:48)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.liftedTree1$1(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.<init>(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.render$1(ParadoxProcessor.scala:77)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.$anonfun$process$8(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.collection.immutable.List.flatMap(List.scala:338)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.process(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.sbt.ParadoxPlugin$.$anonfun$baseParadoxSettings$51(ParadoxPlugin.scala:192)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.std.Transform$$anon$4.work(Transform.scala:67)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$2(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:19)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.work(Execute.scala:290)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$1(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:178)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.CompletionService$$anon$2.call(CompletionService.scala:37)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:834)[0m
+[0m[[0m[0mdebug[0m] [0m[0mjava.io.FileNotFoundException: /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/../docs/src/test/eventsourced/eventsourced_entity.dart (Arquivo ou diretório não encontrado)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open0(Native Method)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:79)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Snippet$.apply(Snippet.scala:29)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.SnipDirective.render(Directive.scala:484)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.DirectiveSerializer.visit(Directive.scala:41)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:386)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.DirectiveNode.accept(DirectiveNode.java:59)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.toHtml(ToHtmlSerializer.java:70)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.write(Writer.scala:78)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeFragment(Writer.scala:87)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeContent(Writer.scala:48)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.liftedTree1$1(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.<init>(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.render$1(ParadoxProcessor.scala:77)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.$anonfun$process$8(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.collection.immutable.List.flatMap(List.scala:338)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.process(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.sbt.ParadoxPlugin$.$anonfun$baseParadoxSettings$51(ParadoxPlugin.scala:192)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.std.Transform$$anon$4.work(Transform.scala:67)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$2(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:19)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.work(Execute.scala:290)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$1(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:178)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.CompletionService$$anon$2.call(CompletionService.scala:37)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:834)[0m
+[0m[[0m[0mdebug[0m] [0m[0mjava.io.FileNotFoundException: /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/../docs/src/test/eventsourced/eventsourced_entity.dart (Arquivo ou diretório não encontrado)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open0(Native Method)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:79)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Snippet$.apply(Snippet.scala:29)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.SnipDirective.render(Directive.scala:484)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.DirectiveSerializer.visit(Directive.scala:41)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:386)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.DirectiveNode.accept(DirectiveNode.java:59)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.toHtml(ToHtmlSerializer.java:70)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.write(Writer.scala:78)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeFragment(Writer.scala:87)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeContent(Writer.scala:48)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.liftedTree1$1(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.<init>(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.render$1(ParadoxProcessor.scala:77)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.$anonfun$process$8(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.collection.immutable.List.flatMap(List.scala:338)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.process(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.sbt.ParadoxPlugin$.$anonfun$baseParadoxSettings$51(ParadoxPlugin.scala:192)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.std.Transform$$anon$4.work(Transform.scala:67)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$2(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:19)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.work(Execute.scala:290)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$1(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:178)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.CompletionService$$anon$2.call(CompletionService.scala:37)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:834)[0m
+[0m[[0m[0mdebug[0m] [0m[0mjava.io.FileNotFoundException: /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/../docs/src/test/eventsourced/eventsourced_entity.dart (Arquivo ou diretório não encontrado)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open0(Native Method)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:79)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Snippet$.apply(Snippet.scala:29)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.SnipDirective.render(Directive.scala:484)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.DirectiveSerializer.visit(Directive.scala:41)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:386)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.DirectiveNode.accept(DirectiveNode.java:59)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.toHtml(ToHtmlSerializer.java:70)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.write(Writer.scala:78)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeFragment(Writer.scala:87)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeContent(Writer.scala:48)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.liftedTree1$1(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.<init>(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.render$1(ParadoxProcessor.scala:77)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.$anonfun$process$8(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.collection.immutable.List.flatMap(List.scala:338)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.process(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.sbt.ParadoxPlugin$.$anonfun$baseParadoxSettings$51(ParadoxPlugin.scala:192)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.std.Transform$$anon$4.work(Transform.scala:67)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$2(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:19)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.work(Execute.scala:290)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$1(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:178)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.CompletionService$$anon$2.call(CompletionService.scala:37)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:834)[0m
+[0m[[0m[0mdebug[0m] [0m[0mjava.io.FileNotFoundException: /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/../docs/src/test/eventsourced/eventsourced_entity.dart (Arquivo ou diretório não encontrado)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open0(Native Method)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:79)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Snippet$.apply(Snippet.scala:29)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.SnipDirective.render(Directive.scala:484)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.DirectiveSerializer.visit(Directive.scala:41)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:386)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.DirectiveNode.accept(DirectiveNode.java:59)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.toHtml(ToHtmlSerializer.java:70)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.write(Writer.scala:78)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeFragment(Writer.scala:87)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeContent(Writer.scala:48)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.liftedTree1$1(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.<init>(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.render$1(ParadoxProcessor.scala:77)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.$anonfun$process$8(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.collection.immutable.List.flatMap(List.scala:338)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.process(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.sbt.ParadoxPlugin$.$anonfun$baseParadoxSettings$51(ParadoxPlugin.scala:192)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.std.Transform$$anon$4.work(Transform.scala:67)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$2(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:19)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.work(Execute.scala:290)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$1(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:178)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.CompletionService$$anon$2.call(CompletionService.scala:37)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:834)[0m
+[0m[[0m[0mdebug[0m] [0m[0mjava.io.FileNotFoundException: /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/../docs/src/test/eventsourced/eventsourced_entity.dart (Arquivo ou diretório não encontrado)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open0(Native Method)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:79)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Snippet$.apply(Snippet.scala:29)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.SnipDirective.render(Directive.scala:484)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.DirectiveSerializer.visit(Directive.scala:41)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:386)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.DirectiveNode.accept(DirectiveNode.java:59)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.toHtml(ToHtmlSerializer.java:70)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.write(Writer.scala:78)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeFragment(Writer.scala:87)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeContent(Writer.scala:48)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.liftedTree1$1(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.<init>(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.render$1(ParadoxProcessor.scala:77)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.$anonfun$process$8(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.collection.immutable.List.flatMap(List.scala:338)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.process(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.sbt.ParadoxPlugin$.$anonfun$baseParadoxSettings$51(ParadoxPlugin.scala:192)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.std.Transform$$anon$4.work(Transform.scala:67)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$2(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:19)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.work(Execute.scala:290)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$1(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:178)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.CompletionService$$anon$2.call(CompletionService.scala:37)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:834)[0m
+[0m[[0m[0mdebug[0m] [0m[0mjava.io.FileNotFoundException: /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/../docs/src/test/eventsourced/behavior/eventsourced_entity.dart (Arquivo ou diretório não encontrado)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open0(Native Method)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:79)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Snippet$.apply(Snippet.scala:29)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.SnipDirective.render(Directive.scala:484)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.DirectiveSerializer.visit(Directive.scala:41)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:386)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.DirectiveNode.accept(DirectiveNode.java:59)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.toHtml(ToHtmlSerializer.java:70)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.write(Writer.scala:78)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeFragment(Writer.scala:87)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeContent(Writer.scala:48)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.liftedTree1$1(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.<init>(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.render$1(ParadoxProcessor.scala:77)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.$anonfun$process$8(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.collection.immutable.List.flatMap(List.scala:338)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.process(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.sbt.ParadoxPlugin$.$anonfun$baseParadoxSettings$51(ParadoxPlugin.scala:192)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.std.Transform$$anon$4.work(Transform.scala:67)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$2(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:19)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.work(Execute.scala:290)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$1(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:178)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.CompletionService$$anon$2.call(CompletionService.scala:37)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:834)[0m
+[0m[[0m[0mdebug[0m] [0m[0mjava.io.FileNotFoundException: /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/../docs/src/test/eventsourced/eventsourced_entity.dart (Arquivo ou diretório não encontrado)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open0(Native Method)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.io.Source$.fromFile(Source.scala:79)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Snippet$.apply(Snippet.scala:29)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.SnipDirective.render(Directive.scala:484)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.DirectiveSerializer.visit(Directive.scala:41)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:386)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.DirectiveNode.accept(DirectiveNode.java:59)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visitChildren(ToHtmlSerializer.java:397)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.visit(ToHtmlSerializer.java:89)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ast.RootNode.accept(RootNode.java:51)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at org.pegdown.ToHtmlSerializer.toHtml(ToHtmlSerializer.java:70)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.write(Writer.scala:78)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeFragment(Writer.scala:87)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.markdown.Writer.writeContent(Writer.scala:48)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.liftedTree1$1(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor$PageContents.<init>(ParadoxProcessor.scala:325)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.render$1(ParadoxProcessor.scala:77)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.$anonfun$process$8(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.collection.immutable.List.flatMap(List.scala:338)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.ParadoxProcessor.process(ParadoxProcessor.scala:94)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at com.lightbend.paradox.sbt.ParadoxPlugin$.$anonfun$baseParadoxSettings$51(ParadoxPlugin.scala:192)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.std.Transform$$anon$4.work(Transform.scala:67)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$2(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:19)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.work(Execute.scala:290)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.Execute.$anonfun$submit$1(Execute.scala:281)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:178)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at sbt.CompletionService$$anon$2.call(CompletionService.scala:37)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:834)[0m
+[0m[[0m[31merror[0m] [0m[0mCould not find file for snippet at /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/src/main/paradox/eventsourced.md:7[0m
+[0m[[0m[31merror[0m] [0m[0m@@snip [ShoppingCartEntity.kt]($base$/docs/src/test/eventsourced/eventsourced_entity.dart) { #entity-class }[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mCould not find file for snippet at /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/src/main/paradox/eventsourced.md:22[0m
+[0m[[0m[31merror[0m] [0m[0m@@snip [domain.proto]($base$/docs/src/test/proto/domain.proto)[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mCould not find file for snippet at /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/src/main/paradox/eventsourced.md:28[0m
+[0m[[0m[31merror[0m] [0m[0m@@snip [eventsourced_entity.dart]($base$/docs/src/test/eventsourced/eventsourced_entity.dart) { #entity-state }[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mCould not find file for snippet at /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/src/main/paradox/eventsourced.md:34[0m
+[0m[[0m[31merror[0m] [0m[0m@@snip [eventsourced_entity.dart]($base$/docs/src/test/eventsourced/eventsourced_entity.dart) { #constructing }[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mCould not find file for snippet at /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/src/main/paradox/eventsourced.md:52[0m
+[0m[[0m[31merror[0m] [0m[0m@@snip [eventsourced_entity.dart]($base$/docs/src/test/eventsourced/eventsourced_entity.dart) { #get-cart }[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mCould not find file for snippet at /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/src/main/paradox/eventsourced.md:66[0m
+[0m[[0m[31merror[0m] [0m[0m@@snip [eventsourced_entity.dart]($base$/docs/src/test/eventsourced/eventsourced_entity.dart) { #add-item }[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mCould not find file for snippet at /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/src/main/paradox/eventsourced.md:80[0m
+[0m[[0m[31merror[0m] [0m[0m@@snip [eventsourced_entity.dart]($base$/docs/src/test/eventsourced/eventsourced_entity.dart) { #item-added }[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mCould not find file for snippet at /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/src/main/paradox/eventsourced.md:86[0m
+[0m[[0m[31merror[0m] [0m[0m@@snip [eventsourced_entity.dart]($base$/docs/src/test/eventsourced/eventsourced_entity.dart) { #snapshot }[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mCould not find file for snippet at /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/src/main/paradox/eventsourced.md:92[0m
+[0m[[0m[31merror[0m] [0m[0m@@snip [eventsourced_entity.dart]($base$/docs/src/test/eventsourced/eventsourced_entity.dart) { #handle-snapshot }[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mCould not find file for snippet at /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/src/main/paradox/eventsourced.md:98[0m
+[0m[[0m[31merror[0m] [0m[0m@@snip [eventsourced_entity.dart]($base$/docs/src/test/eventsourced/behavior/eventsourced_entity.dart) { #content }[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mCould not find file for snippet at /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/src/main/paradox/eventsourced.md:102[0m
+[0m[[0m[31merror[0m] [0m[0m@@snip [eventsourced_entity.dart]($base$/docs/src/test/eventsourced/eventsourced_entity.dart) { #register }[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mCould not find file for snippet at /home/sleipnir/development/workspace/pessoal/cloudstate-repos/dart-support/docs/src/main/paradox/gettingstarted.md:77[0m
+[0m[[0m[31merror[0m] [0m[0m@@snip [main.dart]($base$/docs/src/test/gettingstarted/main.dart) { #shopping-cart-main }[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mParadox failed with 12 errors[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mparadoxMarkdownToHtml[0m) com.lightbend.paradox.sbt.ParadoxPlugin$ParadoxException[0m
