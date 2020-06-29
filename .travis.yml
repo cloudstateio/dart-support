@@ -1,5 +1,10 @@
 language: dart
 
+arch:
+  - amd64
+  - arm64
+os: linux
+
 dart:
   - stable
 
