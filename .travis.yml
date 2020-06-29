@@ -13,6 +13,8 @@ jobs:
   
     # Build
     - stage: build
+      before_install:
+        - sudo apt-get -y install unzip
       script:
         - pub publish --dry-run
     
