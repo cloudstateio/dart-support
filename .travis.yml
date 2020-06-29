@@ -8,13 +8,14 @@ os: linux
 dart:
   - stable
 
+before_install:
+  - sudo apt-get -y install unzip
+
 jobs:
   include:
   
     # Build
     - stage: build
-      before_install:
-        - sudo apt-get -y install unzip
       script:
         - pub publish --dry-run
     
