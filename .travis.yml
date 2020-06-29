@@ -1,15 +1,12 @@
 language: dart
 
-arch:
-  - amd64
-  - arm64
-os: linux
+#arch:
+#  - amd64
+#  - arm64
+#os: linux
 
 dart:
   - stable
-
-before_install:
-  - sudo apt-get -y install unzip
 
 jobs:
   include:
