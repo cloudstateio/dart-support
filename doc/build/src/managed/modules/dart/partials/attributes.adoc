@@ -1,0 +1,1 @@
+:cloudstate-dart-support-version: 0.5.8
