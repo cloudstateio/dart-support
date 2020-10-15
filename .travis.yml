@@ -10,21 +10,24 @@ dart:
 
 jobs:
   include:
-  
+
     # Build
     - stage: build
       script:
         - pub publish --dry-run
-    
+
+    # Validate docs
+    - stage: validate_docs
+      script: make -C doc
+
     # Deploy docs
     - stage: deploy_docs
-      name: deploy docs to cloudstate.io
-      if: repo = cloudstateio/dart-support AND ((branch = master AND type = push) OR tag =~ ^v)
-      language: scala
-      script: cd doc && sbt deploy
+      if: repo = cloudstateio/dart-support AND tag =~ ^v
+      script: make -C doc deploy
 
 stages:
   - build
+  - validate_docs
   - deploy_docs
 
 cache:

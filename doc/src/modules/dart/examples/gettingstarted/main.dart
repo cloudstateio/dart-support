@@ -1,4 +1,4 @@
-// #shopping-cart-main
+// tag::shopping-cart-main[]
 import 'package:cloudstate/cloudstate.dart';
 import 'package:shopping_cart/src/eventsourced_entity.dart';
 
@@ -10,4 +10,4 @@ void main() {
             'com.example.shoppingcart.ShoppingCart', ShoppingCartEntity)
         ..start();
 }
-// #shopping-cart-main
+// end::shopping-cart-main[]
