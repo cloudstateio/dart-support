@@ -1,4 +1,4 @@
-// #content
+// tag::content[]
 import 'package:cloudstate/cloudstate.dart';
 import 'generated/google/protobuf/empty.pb.dart';
 import 'generated/persistence/domain.pb.dart' as Domain;
@@ -90,4 +90,4 @@ class ShoppingCartEntity {
       ..quantity = item.quantity;
   }
 }
-// #content
+// end::content[]

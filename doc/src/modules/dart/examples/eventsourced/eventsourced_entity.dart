@@ -3,23 +3,23 @@ import 'generated/google/protobuf/empty.pb.dart';
 import 'generated/persistence/domain.pb.dart' as Domain;
 import 'generated/shoppingcart.pb.dart' as Shoppingcart;
 
-// #constructing
+// tag::constructing[]
 ShoppingCartEntity.create(@EntityId() String entityId, Context context) {
   this.entityId = entityId;
   this.context = context;
 }
-// #constructing
+// end::constructing[]
 
-// #entity-class
+// tag::entity-class[]
 @EventSourcedEntity()
 class ShoppingCartEntity {
-// #entity-class
+// end::entity-class[]
 
-    // #entity-state
+    // tag::entity-state[]
     final Map<String, Shoppingcart.LineItem> _cart = {};
-    // #entity-state
+    // end::entity-state[]
 
-    // #snapshot
+    // tag::snapshot[]
     @Snapshot()
     Domain.Cart snapshot() {
         return Domain.Cart.create()
@@ -32,9 +32,9 @@ class ShoppingCartEntity {
             ..name = item.name
             ..quantity = item.quantity;
     }
-    // #snapshot
+    // end::snapshot[]
 
-    // #handle-snapshot
+    // tag::handle-snapshot[]
     @SnapshotHandler()
     void handleSnapshot(Domain.Cart cart) {
         _cart.clear();
@@ -42,9 +42,9 @@ class ShoppingCartEntity {
             _cart[item.productId] = convert(item);
         }
     }
-    // #handle-snapshot
+    // end::handle-snapshot[]
 
-    // #item-added
+    // tag::item-added[]
     @EventHandler()
     void itemAdded(Domain.ItemAdded itemAdded) {
         var item = _cart[itemAdded.item.productId];
@@ -62,23 +62,23 @@ class ShoppingCartEntity {
             ..name = item.name
             ..quantity = item.quantity;
     }
-    // #item-added
+    // end::item-added[]
 
-    // #item-removed
+    // tag::item-removed[]
     @EventHandler()
     void itemRemoved(Domain.ItemRemoved itemRemoved) {
         _cart.remove(itemRemoved.productId);
     }
-    // #item-removed
+    // end::item-removed[]
 
-    // #get-cart
+    // tag::get-cart[]
     @EventSourcedCommandHandler()
     Shoppingcart.Cart getCart() {
         return Shoppingcart.Cart.create()..items.addAll(_cart.values);
     }
-    // #get-cart
+    // end::get-cart[]
 
-    // #add-item
+    // tag::add-item[]
     @EventSourcedCommandHandler()
     Empty addItem(Shoppingcart.AddLineItem item, CommandContext ctx) {
         if (item.quantity <= 0) {
@@ -93,9 +93,9 @@ class ShoppingCartEntity {
         ctx.emit(Domain.ItemAdded.create()..item = lineIem);
         return Empty.getDefault();
     }
-    // #add-item
+    // end::add-item[]
 
-    // #command-remove-item
+    // tag::command-remove-item[]
     @EventSourcedCommandHandler()
     Empty removeItem(Shoppingcart.RemoveLineItem item, CommandContext ctx) {
         if (!_cart.containsKey(item.productId)) {
@@ -105,9 +105,9 @@ class ShoppingCartEntity {
         ctx.emit(Domain.ItemRemoved.create()..productId = item.productId);
         return Empty.getDefault();
     }
-    // #command-remove-item
+    // end::command-remove-item[]
 
-    // #register
+    // tag::register[]
     import 'package:cloudstate/cloudstate.dart';
     import 'package:shopping_cart/src/eventsourced_entity.dart';
 
@@ -119,6 +119,6 @@ class ShoppingCartEntity {
                 'com.example.shoppingcart.ShoppingCart', ShoppingCartEntity)
             ..start();
     }
-    // #register
+    // end::register[]
 
 }
